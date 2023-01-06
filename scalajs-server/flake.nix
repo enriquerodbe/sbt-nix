@@ -4,8 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
     utils.url = "github:numtide/flake-utils";
-    sbt.url = "path:/Users/enrique/development/sbt-nix/sbt-hook";
-    hello.url = "path:/Users/enrique/development/sbt-nix/scala-hello";
+    sbt.url = "github:enriquerodbe/sbt-nix?dir=sbt-hook";
+    hello.url = "github:enriquerodbe/sbt-nix?dir=scala-hello";
   };
 
   outputs = {

@@ -67,14 +67,19 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1673023974,
-        "narHash": "sha256-q7E++1UBKh3Es9pKk02Rqhfjb0PuJeERMXK8hK9218c=",
-        "path": "/Users/enrique/development/sbt-nix/scala-hello",
-        "type": "path"
+        "dir": "scala-hello",
+        "lastModified": 1673024644,
+        "narHash": "sha256-mCmBQHkFCJhgJxzWMpH2MhGwczMQHRDA2dR2gYBFBJc=",
+        "owner": "enriquerodbe",
+        "repo": "sbt-nix",
+        "rev": "e28cef4e79e94f3d3f139ea0088fe9de91b881d0",
+        "type": "github"
       },
       "original": {
-        "path": "/Users/enrique/development/sbt-nix/scala-hello",
-        "type": "path"
+        "dir": "scala-hello",
+        "owner": "enriquerodbe",
+        "repo": "sbt-nix",
+        "type": "github"
       }
     },
     "nixpkgs": {
@@ -239,14 +244,19 @@
         "sbt-derivation": "sbt-derivation_2"
       },
       "locked": {
-        "lastModified": 1673023784,
-        "narHash": "sha256-75SeLMNO6WzQX8CnPanfibZzDyUVMqSvvjtkRduNSXg=",
-        "path": "/Users/enrique/development/sbt-nix/sbt-hook",
-        "type": "path"
+        "dir": "sbt-hook",
+        "lastModified": 1673024644,
+        "narHash": "sha256-mCmBQHkFCJhgJxzWMpH2MhGwczMQHRDA2dR2gYBFBJc=",
+        "owner": "enriquerodbe",
+        "repo": "sbt-nix",
+        "rev": "e28cef4e79e94f3d3f139ea0088fe9de91b881d0",
+        "type": "github"
       },
       "original": {
-        "path": "/Users/enrique/development/sbt-nix/sbt-hook",
-        "type": "path"
+        "dir": "sbt-hook",
+        "owner": "enriquerodbe",
+        "repo": "sbt-nix",
+        "type": "github"
       }
     },
     "utils": {
