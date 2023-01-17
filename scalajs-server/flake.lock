@@ -68,11 +68,11 @@
       },
       "locked": {
         "dir": "scala-hello",
-        "lastModified": 1673032953,
-        "narHash": "sha256-y/rmvyWlK5hW1QrY7Qz6qrqJl9MA/e+Z38w6WpokfMs=",
+        "lastModified": 1673978258,
+        "narHash": "sha256-z8zTKbgZVtEujgfeHAjAiHPKCQvmarVTF3WB0jj91sA=",
         "owner": "enriquerodbe",
         "repo": "sbt-nix",
-        "rev": "b945a9e4ef45b23e55ad978417a1c44b50b82cb6",
+        "rev": "dd644794385ec103d488f3db48ffdaad6332a2b1",
         "type": "github"
       },
       "original": {
@@ -130,11 +130,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1673972394,
-        "narHash": "sha256-DZDS0PX6iZVYi+juOpkCcZxlIzht341JX6a+PiCc0fA=",
+        "lastModified": 1673977301,
+        "narHash": "sha256-jRsB3BobXEYQtnBMDUK4QcpAf0MtCjR4wc1Howh+iN4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f851f25ba8185d4878562c7edfaf43dba41a6e66",
+        "rev": "5770984a958f52e58cb8350d28825d813630e19d",
         "type": "github"
       },
       "original": {
@@ -250,11 +250,11 @@
       },
       "locked": {
         "dir": "sbt-hook",
-        "lastModified": 1673032953,
-        "narHash": "sha256-y/rmvyWlK5hW1QrY7Qz6qrqJl9MA/e+Z38w6WpokfMs=",
+        "lastModified": 1673978258,
+        "narHash": "sha256-z8zTKbgZVtEujgfeHAjAiHPKCQvmarVTF3WB0jj91sA=",
         "owner": "enriquerodbe",
         "repo": "sbt-nix",
-        "rev": "b945a9e4ef45b23e55ad978417a1c44b50b82cb6",
+        "rev": "dd644794385ec103d488f3db48ffdaad6332a2b1",
         "type": "github"
       },
       "original": {

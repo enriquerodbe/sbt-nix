@@ -91,11 +91,11 @@
       },
       "locked": {
         "dir": "sbt-hook",
-        "lastModified": 1673024644,
-        "narHash": "sha256-mCmBQHkFCJhgJxzWMpH2MhGwczMQHRDA2dR2gYBFBJc=",
+        "lastModified": 1673978258,
+        "narHash": "sha256-z8zTKbgZVtEujgfeHAjAiHPKCQvmarVTF3WB0jj91sA=",
         "owner": "enriquerodbe",
         "repo": "sbt-nix",
-        "rev": "e28cef4e79e94f3d3f139ea0088fe9de91b881d0",
+        "rev": "dd644794385ec103d488f3db48ffdaad6332a2b1",
         "type": "github"
       },
       "original": {

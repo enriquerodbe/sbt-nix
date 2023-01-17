@@ -25,7 +25,7 @@
         packages.default = sbt.mkSbtDerivation.${system} {
           pname = "scalajs-server";
           version = "0.0.1";
-          depsSha256 = "sha256-3wxI5tmqCOKjR97w8/15cQ49hkCKTQD8mEFhE0F7jUI=";
+          depsSha256 = "sha256-YMNRJNMS8dUu6H8p8X2AoeOikUFk4yvFcAEYVd0T7jo=";
           src = builtins.path {
             path = ./.;
             name = "scalajs-server";
@@ -42,7 +42,7 @@
             chmod +x $out/app
           '';
 
-          buildInputs = [
+          nativeBuildInputs = [
             helloPkg # Normal dependency
             sbtPkg # Provides hook to load SBT_PATH
           ];
