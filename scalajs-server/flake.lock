@@ -68,11 +68,11 @@
       },
       "locked": {
         "dir": "scala-hello",
-        "lastModified": 1673024644,
-        "narHash": "sha256-mCmBQHkFCJhgJxzWMpH2MhGwczMQHRDA2dR2gYBFBJc=",
+        "lastModified": 1673032953,
+        "narHash": "sha256-y/rmvyWlK5hW1QrY7Qz6qrqJl9MA/e+Z38w6WpokfMs=",
         "owner": "enriquerodbe",
         "repo": "sbt-nix",
-        "rev": "e28cef4e79e94f3d3f139ea0088fe9de91b881d0",
+        "rev": "b945a9e4ef45b23e55ad978417a1c44b50b82cb6",
         "type": "github"
       },
       "original": {
@@ -130,11 +130,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1673014281,
-        "narHash": "sha256-WDvalX0fihNS6Wow+yL/k3OXC1FoXY1W/0pYQxFECNA=",
+        "lastModified": 1673972394,
+        "narHash": "sha256-DZDS0PX6iZVYi+juOpkCcZxlIzht341JX6a+PiCc0fA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "eec992ad7f245ed9991405f78eaa7379ad559884",
+        "rev": "f851f25ba8185d4878562c7edfaf43dba41a6e66",
         "type": "github"
       },
       "original": {
@@ -189,14 +189,19 @@
         "sbt-derivation": "sbt-derivation"
       },
       "locked": {
-        "lastModified": 1673023784,
-        "narHash": "sha256-75SeLMNO6WzQX8CnPanfibZzDyUVMqSvvjtkRduNSXg=",
-        "path": "/Users/enrique/development/sbt-nix/sbt-hook",
-        "type": "path"
+        "dir": "sbt-hook",
+        "lastModified": 1673024644,
+        "narHash": "sha256-mCmBQHkFCJhgJxzWMpH2MhGwczMQHRDA2dR2gYBFBJc=",
+        "owner": "enriquerodbe",
+        "repo": "sbt-nix",
+        "rev": "e28cef4e79e94f3d3f139ea0088fe9de91b881d0",
+        "type": "github"
       },
       "original": {
-        "path": "/Users/enrique/development/sbt-nix/sbt-hook",
-        "type": "path"
+        "dir": "sbt-hook",
+        "owner": "enriquerodbe",
+        "repo": "sbt-nix",
+        "type": "github"
       }
     },
     "sbt-derivation": {
@@ -245,11 +250,11 @@
       },
       "locked": {
         "dir": "sbt-hook",
-        "lastModified": 1673024644,
-        "narHash": "sha256-mCmBQHkFCJhgJxzWMpH2MhGwczMQHRDA2dR2gYBFBJc=",
+        "lastModified": 1673032953,
+        "narHash": "sha256-y/rmvyWlK5hW1QrY7Qz6qrqJl9MA/e+Z38w6WpokfMs=",
         "owner": "enriquerodbe",
         "repo": "sbt-nix",
-        "rev": "e28cef4e79e94f3d3f139ea0088fe9de91b881d0",
+        "rev": "b945a9e4ef45b23e55ad978417a1c44b50b82cb6",
         "type": "github"
       },
       "original": {
