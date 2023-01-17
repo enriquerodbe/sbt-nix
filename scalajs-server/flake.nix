@@ -48,12 +48,12 @@
           ];
         };
 
-        devShell = pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           inputsFrom = [packages.default];
           packages = [nodejs]; # To run tests
         };
 
-        defaultApp = {
+        apps.default = {
           type = "app";
           program = "${packages.default}/app";
         };

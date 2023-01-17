@@ -20,14 +20,14 @@
         packages.default = sbt.mkSbtDerivation.${system} {
           pname = "scala-hello";
           version = "0.0.1";
-          depsSha256 = "sha256-wLQI9d8KqLQl2vGVlTfy6NuN5iY+P3L4F6WnukP4noU=";
+          depsSha256 = "sha256-102cw9huax1LHUQawIphj6tCeGtqlV9h4XtO8NGVESM=";
           src = builtins.path {
             path = ./.;
             name = "scala-hello";
           };
         };
 
-        devShell = pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           inputsFrom = [packages.default];
           packages = [pkgs.nodejs-18_x]; # To run tests
         };
