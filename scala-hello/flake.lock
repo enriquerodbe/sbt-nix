@@ -15,6 +15,21 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1674238073,
@@ -26,6 +41,22 @@
       },
       "original": {
         "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1674096995,
+        "narHash": "sha256-/vw7At/SztpZjTeM11foA7YdOFmdwSn+ARo8oy+mlUU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "676c80dcc2f0ba780c8ab204f92c5abd69fa1245",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -48,26 +79,25 @@
         "sbt-derivation": "sbt-derivation"
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-y9ATf8I9XgxbYjo4yK7xTEyFnFmdgYpmYNCkOJw6JeQ=",
-        "path": "../sbt-hook",
-        "type": "path"
+        "dir": "sbt-hook",
+        "lastModified": 1673979401,
+        "narHash": "sha256-mSYrrmEbdnU4ujES+3Xgnf3beJ7i7JcJQzKrZykov/8=",
+        "owner": "enriquerodbe",
+        "repo": "sbt-nix",
+        "rev": "bc082145f4be06bc72a5903fa85eef77ef46b75a",
+        "type": "github"
       },
       "original": {
-        "path": "../sbt-hook",
-        "type": "path"
+        "dir": "sbt-hook",
+        "owner": "enriquerodbe",
+        "repo": "sbt-nix",
+        "type": "github"
       }
     },
     "sbt-derivation": {
       "inputs": {
-        "flake-utils": [
-          "sbt",
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "sbt",
-          "nixpkgs"
-        ]
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1670683679,

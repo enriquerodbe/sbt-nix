@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
     sbt = {
-      url = "path:../sbt-hook";
+      url = "github:enriquerodbe/sbt-nix?dir=sbt-hook";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };

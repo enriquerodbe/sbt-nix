@@ -6,7 +6,6 @@ on:
 
 jobs:
   ci:
-    name: Continuous Integration
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -24,7 +23,7 @@ jobs:
           cd scala-hello
           nix fmt -- -c flake.nix
           nix build --no-update-lock-file
-      - name: Build scalajs-server
+      - name: scalajs-server
         run: |
           cd scalajs-server
           nix fmt -- -c flake.nix
