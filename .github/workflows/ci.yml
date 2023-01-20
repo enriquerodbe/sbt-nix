@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci:
+    name: Continuous Integration
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v18
+      - name: sbt-hook
+        run: |
+          cd sbt-hook
+          nix fmt -- -c flake.nix
+          nix build --no-update-lock-file
+      - name: scala-hello
+        run: |
+          cd scala-hello
+          nix fmt -- -c flake.nix
+          nix build --no-update-lock-file
+      - name: Build scalajs-server
+        run: |
+          cd scalajs-server
+          nix fmt -- -c flake.nix
+          nix build --no-update-lock-file

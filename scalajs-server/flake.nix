@@ -3,19 +3,28 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
-    utils.url = "github:numtide/flake-utils";
-    sbt.url = "github:enriquerodbe/sbt-nix?dir=sbt-hook";
-    hello.url = "github:enriquerodbe/sbt-nix?dir=scala-hello";
+    flake-utils.url = "github:numtide/flake-utils";
+    sbt = {
+      url = "path:../sbt-hook";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+    hello = {
+      url = "path:../scala-hello";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.sbt.follows = "sbt";
+    };
   };
 
   outputs = {
     nixpkgs,
-    utils,
+    flake-utils,
     sbt,
     hello,
     ...
   }:
-    utils.lib.eachDefaultSystem (
+    flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
         nodejs = pkgs.nodejs-18_x;
@@ -32,7 +41,7 @@
           };
 
           buildPhase = ''
-            sbt fullLinkJS
+            sbt scalafmtCheckAll test fullLinkJS
           '';
 
           installPhase = ''

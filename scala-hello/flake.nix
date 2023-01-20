@@ -3,17 +3,21 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
-    utils.url = "github:numtide/flake-utils";
-    sbt.url = "github:enriquerodbe/sbt-nix?dir=sbt-hook";
+    flake-utils.url = "github:numtide/flake-utils";
+    sbt = {
+      url = "path:../sbt-hook";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
   outputs = {
     nixpkgs,
-    utils,
+    flake-utils,
     sbt,
     ...
   }:
-    utils.lib.eachDefaultSystem (
+    flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
       in rec {
@@ -25,11 +29,16 @@
             path = ./.;
             name = "scala-hello";
           };
+
+          buildInputs = [pkgs.nodejs-18_x]; # To run tests
+
+          buildPhase = ''
+            sbt scalafmtCheckAll test
+          '';
         };
 
         devShells.default = pkgs.mkShell {
           inputsFrom = [packages.default];
-          packages = [pkgs.nodejs-18_x]; # To run tests
         };
 
         formatter = pkgs.alejandra;
