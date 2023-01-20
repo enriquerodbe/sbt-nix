@@ -33,7 +33,7 @@
           buildInputs = [pkgs.nodejs-18_x]; # To run tests
 
           buildPhase = ''
-            sbt scalafmtCheckAll test
+            sbt test
           '';
         };
 

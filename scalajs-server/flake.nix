@@ -41,7 +41,7 @@
           };
 
           buildPhase = ''
-            sbt scalafmtCheckAll test fullLinkJS
+            sbt test fullLinkJS
           '';
 
           installPhase = ''

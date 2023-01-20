@@ -6,6 +6,7 @@ on:
 
 jobs:
   ci:
+    name: Test & Build
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -22,9 +23,11 @@ jobs:
         run: |
           cd scala-hello
           nix fmt -- -c flake.nix
+          nix develop -ic sbt scalafmtCheckAll
           nix build --no-update-lock-file
       - name: scalajs-server
         run: |
           cd scalajs-server
           nix fmt -- -c flake.nix
+          nix develop -ic sbt scalafmtCheckAll
           nix build --no-update-lock-file
