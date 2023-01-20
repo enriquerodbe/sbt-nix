@@ -24,7 +24,7 @@
         packages.default = sbt.mkSbtDerivation.${system} {
           pname = "scala-hello";
           version = "0.0.1";
-          depsSha256 = "sha256-102cw9huax1LHUQawIphj6tCeGtqlV9h4XtO8NGVESM=";
+          depsSha256 = "sha256-aYliG1t86Yd21VEt069kSdJ4VT6LYXwQ3BNEghfHVUg=";
           src = builtins.path {
             path = ./.;
             name = "scala-hello";
