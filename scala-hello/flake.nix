@@ -32,6 +32,12 @@
 
           buildInputs = [pkgs.nodejs-18_x]; # To run tests
 
+          # Ensure that Scala.js linker is added
+          # to the dependencies derivation
+          depsWarmupCommand = ''
+            sbt fastLinkJS
+          '';
+
           buildPhase = ''
             sbt test
           '';

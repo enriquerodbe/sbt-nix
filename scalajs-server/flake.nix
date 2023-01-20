@@ -40,6 +40,12 @@
             name = "scalajs-server";
           };
 
+          # Ensure that Scala.js linker is added
+          # to the dependencies derivation
+          depsWarmupCommand = ''
+            sbt fastLinkJS
+          '';
+
           buildPhase = ''
             sbt test fullLinkJS
           '';
