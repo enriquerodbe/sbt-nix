@@ -3,33 +3,48 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
-    utils.url = "github:numtide/flake-utils";
-    sbt.url = "github:enriquerodbe/sbt-nix?dir=sbt-hook";
+    flake-utils.url = "github:numtide/flake-utils";
+    sbt = {
+      url = "github:enriquerodbe/sbt-nix?dir=sbt-hook";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
   outputs = {
     nixpkgs,
-    utils,
+    flake-utils,
     sbt,
     ...
   }:
-    utils.lib.eachDefaultSystem (
+    flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
       in rec {
         packages.default = sbt.mkSbtDerivation.${system} {
           pname = "scala-hello";
           version = "0.0.1";
-          depsSha256 = "sha256-102cw9huax1LHUQawIphj6tCeGtqlV9h4XtO8NGVESM=";
+          depsSha256 = "sha256-aYliG1t86Yd21VEt069kSdJ4VT6LYXwQ3BNEghfHVUg=";
           src = builtins.path {
             path = ./.;
             name = "scala-hello";
           };
+
+          buildInputs = [pkgs.nodejs-18_x]; # To run tests
+
+          # Ensure that Scala.js linker is added
+          # to the dependencies derivation
+          depsWarmupCommand = ''
+            sbt fastLinkJS
+          '';
+
+          buildPhase = ''
+            sbt test
+          '';
         };
 
         devShells.default = pkgs.mkShell {
           inputsFrom = [packages.default];
-          packages = [pkgs.nodejs-18_x]; # To run tests
         };
 
         formatter = pkgs.alejandra;
