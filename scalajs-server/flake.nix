@@ -34,11 +34,13 @@
         packages.default = sbt.mkSbtDerivation.${system} {
           pname = "scalajs-server";
           version = "0.0.1";
-          depsSha256 = "sha256-YMNRJNMS8dUu6H8p8X2AoeOikUFk4yvFcAEYVd0T7jo=";
+          depsSha256 = "sha256-isgCStaS/UmN5yc9TBkshX+Vf4yXGetpGUer0qlVCjI=";
           src = builtins.path {
             path = ./.;
             name = "scalajs-server";
           };
+
+          buildInputs = [nodejs]; # To run tests
 
           # Ensure that Scala.js linker is added
           # to the dependencies derivation
@@ -65,7 +67,6 @@
 
         devShells.default = pkgs.mkShell {
           inputsFrom = [packages.default];
-          packages = [nodejs]; # To run tests
         };
 
         apps.default = {
