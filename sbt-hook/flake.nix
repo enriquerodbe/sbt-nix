@@ -30,7 +30,7 @@
           installPhase = ''
             mkdir -p $out/lib/ivy2
             SBT_OPTS="$SBT_OPTS -Dsbt.ivy.home=$out/lib/ivy2"
-            sbt publishLocal
+            sbt '+ publishLocal'
           '';
         };
       in {
